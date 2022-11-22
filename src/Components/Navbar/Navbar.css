@@ -4,6 +4,9 @@
     display: flex;
     justify-content: space-between;
     vertical-align: middle;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: ghostwhite;
 }
 
 .logo {
@@ -31,11 +34,11 @@
     display: inline;
 }
 
-.botones a {
+.botones button {
     color: black;
     text-decoration: none;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     border: 1px green solid;
     border-radius: 10px;
     background-color: lightgreen;
@@ -44,4 +47,14 @@
 .login {
     display: inline;
     text-align: right;
+}
+
+.login button {
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 10px 5px 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: lightgray;
 }
