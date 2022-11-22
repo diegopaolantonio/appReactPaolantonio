@@ -1,0 +1,47 @@
+.encabezado {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.logo {
+    display: inline;
+    text-align: left;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: inline;
+    margin-right: 10px;
+}
+
+.titulo {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+        color: green;
+}
+
+.botones {
+    display: inline;
+}
+
+.botones a {
+    color: black;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    border: 1px green solid;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+.login {
+    display: inline;
+    text-align: right;
+}
