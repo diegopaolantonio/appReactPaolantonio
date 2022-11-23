@@ -1,3 +1,6 @@
+// Componente de carrito y cantidad de productos marcados, falta automatizar el contador
+// ya que este es un numero fijo
+
 import "./CartWidget.css"
 
 const CartWidget = () => {

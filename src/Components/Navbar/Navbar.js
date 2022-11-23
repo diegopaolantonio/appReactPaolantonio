@@ -1,3 +1,6 @@
+// Componente para el Navbar, este utiliza el componente de botones y carrito para mostrar
+// este es importado en App.js
+
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import BotonNavbar from "../BotonNavbar/BotonNavbar";
