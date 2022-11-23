@@ -1,60 +1,38 @@
 .encabezado {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    justify-content: space-between;
-    vertical-align: middle;
-    border: 1px solid green;
-    border-radius: 10px;
-    background-color: ghostwhite;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: ghostwhite;
 }
 
 .logo {
-    display: inline;
-    text-align: left;
+  display: inline;
+  text-align: left;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    display: inline;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: inline;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .titulo {
-    font-weight: bold;
-    padding: 0px;
-    margin: 0px;
-    display: inline;
-        color: green;
-}
-
-.botones {
-    display: inline;
-}
-
-.botones button {
-    color: black;
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px 10px 5px 10px;
-    border: 1px green solid;
-    border-radius: 10px;
-    background-color: lightgreen;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  display: inline;
+  font-size: 1.2rem;
+  color: green;
 }
 
 .login {
-    display: inline;
-    text-align: right;
-}
-
-.login button {
-    color: black;
-    text-decoration: none;
-    margin: 5px;
-    padding: 5px 10px 5px 10px;
-    border: 1px black solid;
-    border-radius: 10px;
-    background-color: lightgray;
+  display: inline;
+  text-align: right;
 }

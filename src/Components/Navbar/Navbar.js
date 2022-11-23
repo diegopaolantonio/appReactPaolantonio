@@ -1,22 +1,23 @@
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import BotonNavbar from "../BotonNavbar/BotonNavbar";
 
 const Navbar = () => {
   return (
     <nav className="row encabezado">
       <div className="col-xl-4 col-md-4 col-sm-4 logo">
-        <img src={'./images/leonExperto.png'} alt="logo" />
-        <p className="titulo">EXPERTO INGENIERIA</p>
+        <img src={'./images/leonExperto.png'} alt="Logo Empresa" />
+        <h1 className="titulo">EXPERTO INGENIERIA</h1>
       </div>
-      <div className="col-xl-4 col-md-4 col-sm-4 botones">
-            <button>Inicio</button>
-            <button>Servicios</button>
-            <button>Productos</button>
-            <button>Contacto</button>
+      <div className="col-xl-4 col-md-4 col-sm-4">
+            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Inicio</BotonNavbar>
+            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Servicios</BotonNavbar>
+            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Productos</BotonNavbar>
+            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Contacto</BotonNavbar>
       </div>
       <div className="col-xl-4 col-md-4 col-sm-4 login">
         <CartWidget />
-        <button>Login</button>
+        <BotonNavbar colorBorde = "black" colorFondo = "lightgray" >Login</BotonNavbar>
       </div>
     </nav>
   );
