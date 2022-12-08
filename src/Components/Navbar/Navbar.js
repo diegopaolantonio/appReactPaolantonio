@@ -3,24 +3,29 @@
 
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
-import BotonNavbar from "../BotonNavbar/BotonNavbar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="row encabezado">
       <div className="col-xl-4 col-md-4 col-sm-4 logo">
-        <img src={'./images/leonExperto.png'} alt="Logo Empresa" />
+        <img src={"./images/leonExperto.png"} alt="Logo Empresa" />
         <h1 className="titulo">EXPERTO INGENIERIA</h1>
       </div>
       <div className="col-xl-4 col-md-4 col-sm-4">
-            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Inicio</BotonNavbar>
-            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Servicios</BotonNavbar>
-            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Productos</BotonNavbar>
-            <BotonNavbar colorBorde = "green" colorFondo = "lightgreen" >Contacto</BotonNavbar>
+        <Link to="/" className="botonNavegacion">
+          Inicio
+        </Link>
+        <Link to="/category/PLC" className="botonNavegacion">
+          PLC
+        </Link>
+        <Link to="/category/HMI" className="botonNavegacion">
+          HMI
+        </Link>
       </div>
       <div className="col-xl-4 col-md-4 col-sm-4 login">
         <CartWidget />
-        <BotonNavbar colorBorde = "black" colorFondo = "lightgray" >Login</BotonNavbar>
+        <button className="botonLogin">Login</button>
       </div>
     </nav>
   );

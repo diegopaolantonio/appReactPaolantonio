@@ -1,0 +1,31 @@
+.itemProduct {
+    margin: 10px;
+    background-color: ghostwhite;
+    border: 1px solid black;
+}
+
+.fotoProducto {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.descProducto {
+    display: inline-block;
+}
+
+.linkItem {
+    display: block;
+    color: black;
+    margin: 10px;
+    text-decoration: none;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: lightgreen;
+}
+
+.itemPrice {
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
