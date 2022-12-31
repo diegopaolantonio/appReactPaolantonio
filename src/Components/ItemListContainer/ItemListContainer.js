@@ -1,41 +1,48 @@
-// Componente para el cuerpo de la pagina, ahora solo con un mensaje fijo}
-// falta agregar los productos a mostrar y la logica
-// este es importado en App.js
-// Este recibe atributo de color y tamaño de texto, y el mensaje a mostrar
-
 import "./ItemListContainer.css";
 import { useState, useEffect } from "react";
-import { getItems, getItemByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from '../../services/firebase/firebaseConfig'
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true)
+  
   const { categoryId } = useParams();
   console.log(categoryId);
 
   useEffect(
     (e) => {
-      if (!categoryId) {
-        getItems()
-          .then((response) => {
-            setItems(response);
+      setLoading(true)
+
+      const collectionRef = categoryId 
+        ? query(collection(db, 'products'), where('category', '==', categoryId))
+        : collection(db, 'products')
+
+      getDocs(collectionRef)
+        .then(response => {
+          const itemsAdaptados = response.docs.map(doc => {
+            const data = doc.data()
+
+            return { id: doc.id, ...data}
           })
-          .catch((error) => {
-            console.log(error);
-          });
-      } else {
-        getItemByCategory(categoryId)
-          .then((response) => {
-            setItems(response);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      }
+
+          setItems(itemsAdaptados)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+        .finally(() => {
+          setLoading(false)
+        })
     },
     [categoryId]
   );
+
+  if(loading) {
+    return <h1>Cargando Nota...</h1>
+}
 
   return (
     <div>

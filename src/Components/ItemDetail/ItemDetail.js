@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
       ></img>
       <div>
         <h2>
-          {item.id} - {item.category} {item.brand}
+          {item.category} {item.brand}
         </h2>
         <h3>{item.name}</h3>
         <p>{item.description}</p>

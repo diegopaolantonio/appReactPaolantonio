@@ -16,7 +16,7 @@ const Item = ({ item }) => {
       ></img>
       <div className="descProducto">
         <h2>
-          {item.id} - {item.category} {item.brand}
+          {item.category} {item.brand}
         </h2>
         <h3>{item.name}</h3>
         <p>{item.description.slice(0, 50)}...</p>
