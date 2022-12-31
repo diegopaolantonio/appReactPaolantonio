@@ -1,11 +1,11 @@
 import "./Item.css";
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount";
+// import ItemCount from "../ItemCount/ItemCount";
 
 const Item = ({ item }) => {
-  const handOnAdd = (cantidad, id) => {
-    console.log("Cantidad " + cantidad);
-  };
+  // const handOnAdd = (cantidad, SKid) => {
+  //   console.log("Cantidad " + cantidad);
+  // };
 
   return (
     <div className="itemProduct">
@@ -18,12 +18,13 @@ const Item = ({ item }) => {
         <h2>
           {item.id} - {item.category} {item.brand}
         </h2>
+        <h3>{item.name}</h3>
         <p>{item.description.slice(0, 50)}...</p>
         <p className="itemPrice">USD {item.price}</p>
         <Link className="linkItem" to={`/item/${item.id}`}>
           Ver Detalle
         </Link>
-        <ItemCount item={item} initial={0} stock={10} onAdd={handOnAdd} />
+        {/* <ItemCount item={item} initial={0} stock={10} onAdd={handOnAdd} /> */}
       </div>
     </div>
   );

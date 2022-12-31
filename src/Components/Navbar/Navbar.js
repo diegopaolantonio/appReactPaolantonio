@@ -24,7 +24,9 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="col-xl-4 col-md-4 col-sm-4 login">
-        <CartWidget />
+      <Link to="/cart">
+      <CartWidget />
+        </Link>
         <button className="botonLogin">Login</button>
       </div>
     </nav>

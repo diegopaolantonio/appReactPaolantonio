@@ -2,12 +2,18 @@
 // ya que este es un numero fijo
 
 import "./CartWidget.css"
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
+  const {getCantidad} = useContext (CartContext)
+
+  const cantidadTotal = getCantidad()
+
   return (
     <div className="carrito">
       <img src="./images/cartWidget.png" alt="Carrito" />
-      <p>10</p>
+      <p>{cantidadTotal}</p>
     </div>
   );
 };
