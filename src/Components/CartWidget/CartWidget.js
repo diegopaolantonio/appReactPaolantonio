@@ -1,14 +1,14 @@
 // Componente de carrito y cantidad de productos marcados, falta automatizar el contador
 // ya que este es un numero fijo
 
-import "./CartWidget.css"
+import "./CartWidget.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
 const CartWidget = () => {
-  const {getCantidad} = useContext (CartContext)
+  const { getCantidad } = useContext(CartContext);
 
-  const cantidadTotal = getCantidad()
+  const cantidadTotal = getCantidad();
 
   return (
     <div className="carrito">

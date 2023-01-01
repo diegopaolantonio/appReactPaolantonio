@@ -1,13 +1,6 @@
-.bloqueCart h2 {
-    display: inline;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.linkCart {
+.linkCheckout {
     display: inline;
     color: black;
-    padding: 3px 20px 3px 20px;
     margin: 10px;
     text-decoration: none;
     border: 1px solid green;
